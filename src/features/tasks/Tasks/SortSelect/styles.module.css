@@ -1,0 +1,40 @@
+.wrap {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.buttons {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    gap: 5px;
+}
+.select {
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    flex: 1 1;
+}
+.addTaskButton,
+.deleteCompletedTask {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid darkgrey;
+    outline: none;
+}
+@media screen and (max-width: 460px) {
+    .select,
+    .buttons {
+        width: 100%;
+    }
+    .addTaskButton,
+    .deleteCompletedTask{
+        flex: 1 1;
+    }
+}

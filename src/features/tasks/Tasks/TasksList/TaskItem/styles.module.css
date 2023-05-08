@@ -1,0 +1,64 @@
+.taskItem {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.taskItem:nth-child(even) {
+    background-color: yellow;
+}
+.taskItem:nth-child(odd) {
+    background-color: skyblue;
+}
+.taskItem:nth-child(even).completed,
+.taskItem:nth-child(odd).completed{
+    background-color: lightgray;
+}
+.taskItemCheckbox:checked ~ .taskItemText{
+    text-decoration: line-through;
+}
+.taskItemCheckbox {
+    width: 16px;
+    height: 16px;
+}
+.taskItemText {
+    flex: 1 1;
+}
+
+.taskItemDeleteButton {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: darkgrey;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.taskItemCheckbox:checked ~ .taskItemDeleteButton {
+    background-color: red;
+}
+.taskItemDeleteButton:before,
+.taskItemDeleteButton:after{
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+.taskItemDeleteButton:after {
+    transform: rotate(-45deg);
+}
